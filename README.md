@@ -15,17 +15,14 @@ User-Friendly Interface: Command-line interface for easy interaction, allowing u
 Installation
 ------------
 Clone the repository:
-..
 
     git clone https://github.com/yourusername/shamir-seed-splitter.git
 
 Navigate to the project directory:
-..
 
     cd shamir-seed-splitter
 
 Install required dependencies: Ensure you have Python 3.6+ installed. Install the necessary libraries:
-..
 
     pip install -r requirements.txt
 
