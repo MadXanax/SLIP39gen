@@ -38,7 +38,6 @@ Securely Delete Data: Once the shares are generated, the script securely deletes
 
 Example
 Upon running the script, you'll see prompts like:
-..
 
     Enter your BIP39 seed phrase (24 words):
     Please re-enter your BIP39 seed phrase to confirm:
@@ -71,4 +70,4 @@ This project is inspired by the Shamir Secret Sharing implementation in Trezor h
 
 Limitations
 -----------
-The tool is only compatible with a group number of 1, as of now
+* The tool is only compatible with a group number of 1, as of now
