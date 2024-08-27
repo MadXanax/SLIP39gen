@@ -15,17 +15,17 @@ User-Friendly Interface: Command-line interface for easy interaction, allowing u
 Installation
 ------------
 Clone the repository:
-.. code-block:: console
+..
 
     git clone https://github.com/yourusername/shamir-seed-splitter.git
 
 Navigate to the project directory:
-.. code-block:: console
+..
 
     cd shamir-seed-splitter
 
 Install required dependencies: Ensure you have Python 3.6+ installed. Install the necessary libraries:
-.. code-block:: console
+..
 
     pip install -r requirements.txt
 
@@ -41,7 +41,7 @@ Securely Delete Data: Once the shares are generated, the script securely deletes
 
 Example
 Upon running the script, you'll see prompts like:
-.. code-block:: console
+..
 
     Enter your BIP39 seed phrase (24 words):
     Please re-enter your BIP39 seed phrase to confirm:
