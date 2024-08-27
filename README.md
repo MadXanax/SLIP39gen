@@ -6,11 +6,11 @@ Welcome to the SLIP39gen repository! This project provides a Python-based tool t
 
 Features
 --------
-Seed Phrase Validation: Checks the validity of a 24-word BIP39 seed phrase to ensure it's correctly formatted and adheres to the standard.
-Entropy Conversion: Converts the validated seed phrase into 256-bit entropy, a prerequisite for generating mnemonic shares.
-Shamir Secret Sharing: Uses the SLIP39 protocol to split the seed phrase entropy into multiple mnemonic shares, each of which can be used to reconstruct the original seed phrase when combined.
-Secure Data Handling: Implements secure deletion of sensitive data from memory after use to minimize the risk of exposure.
-User-Friendly Interface: Command-line interface for easy interaction, allowing users to input their seed phrase and customize the Shamir Secret Sharing configuration.
+* Seed Phrase Validation: Checks the validity of a 24-word BIP39 seed phrase to ensure it's correctly formatted and adheres to the standard.
+* Entropy Conversion: Converts the validated seed phrase into 256-bit entropy, a prerequisite for generating mnemonic shares.
+* Shamir Secret Sharing: Uses the SLIP39 protocol to split the seed phrase entropy into multiple mnemonic shares, each of which can be used to reconstruct the original seed phrase when combined.
+* Secure Data Handling: Implements secure deletion of sensitive data from memory after use to minimize the risk of exposure.
+* User-Friendly Interface: Command-line interface for easy interaction, allowing users to input their seed phrase and customize the Shamir Secret Sharing configuration.
 
 Installation
 ------------
