@@ -16,11 +16,11 @@ Installation
 ------------
 Clone the repository:
 
-    git clone https://github.com/yourusername/shamir-seed-splitter.git
+    git clone https://github.com/MadXanax/SLIP39gen.git
 
 Navigate to the project directory:
 
-    cd shamir-seed-splitter
+    cd SLIP39gen
 
 Install required dependencies: Ensure you have Python 3.6+ installed. Install the necessary libraries:
 
@@ -62,7 +62,7 @@ Contributions are welcome! Please fork this repository and open a pull request t
 
 License
 -------
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the GPL-3.0 License - see the LICENSE file for details.
 
 Acknowledgments
 ---------------
