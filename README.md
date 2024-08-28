@@ -1,4 +1,4 @@
-# SLIP39gen(erator)
+# SLIP39gen(erator) : Split your seedphrase into Shamir Shares
 A Python tool to split a BIP39 12 or 24-word seed phrase into Shamir Secret Shares (SLIP39) for enhanced security and backup.
 
 
