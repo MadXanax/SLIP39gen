@@ -2,7 +2,7 @@
 A Python tool to split a BIP39 12 or 24-word seed phrase into Shamir Secret Shares (SLIP39) for enhanced security and backup.
 
 
-Welcome to the SLIP39gen repository! This project provides a Python-based tool to split a BIP39 12 or 24-word seed phrase into multiple mnemonic shares using the Shamir Secret Sharing scheme (SLIP39). This enhances the security and redundancy of your cryptocurrency backups, ensuring that your sensitive seed phrase can be securely stored and reconstructed when needed.
+This project provides a Python-based tool to split a BIP39 12 or 24-word seed phrase into multiple mnemonic shares using the Shamir Secret Sharing scheme (SLIP39). This enhances the security and redundancy of your cryptocurrency backups, ensuring that your sensitive seed phrase can be securely stored and reconstructed when needed.
 
 Features
 --------
@@ -22,7 +22,7 @@ Navigate to the project directory:
 
     cd SLIP39gen
 
-Install required dependencies: Ensure you have Python 3.6+ installed. Install the necessary libraries:
+Install required dependencies:
 
     pip install -r requirements.txt
 
