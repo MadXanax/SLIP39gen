@@ -28,7 +28,10 @@ Install required dependencies:
 
 Usage
 -----
-Run the script Split_Seedphrase_into_ShmairShares.py
+Run the script:
+
+    Split_Seedphrase_into_ShmairShares.py
+
 Follow the prompts to enter your BIP39 seed phrase. You'll be asked to confirm the phrase for accuracy.
 Configure the Shamir Secret Sharing settings. Input the member threshold and total number of shares for each group.
 
