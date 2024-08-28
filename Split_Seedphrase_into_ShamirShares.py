@@ -7,16 +7,18 @@ import gc
 def validate_seed_phrase(seed_phrase):
     """
     Validate the BIP39 seed phrase to ensure it is correct.
+    Supports both 12-word (128 bits) and 24-word (256 bits) seed phrases.
     """
     mnemo = Mnemonic("english")
     if not mnemo.check(seed_phrase):
         print()
-        raise ValueError("Invalid seed phrase. Please ensure it is a valid BIP39 24-word seed phrase.\n\n=================== END 1 ===================\n")
+        raise ValueError("Invalid seed phrase. Please ensure it is a valid BIP39 12-word or 24-word seed phrase.\n\n=================== END 1 ===================\n")
     return seed_phrase
 
 def get_entropy_from_seed_phrase(seed_phrase):
     """
-    Convert the BIP39 seed phrase to entropy (256-bit).
+    Convert the BIP39 seed phrase to entropy.
+    Supports both 12-word (128 bits) and 24-word (256 bits) seed phrases.
     """
     mnemo = Mnemonic("english")
     try:
@@ -25,19 +27,20 @@ def get_entropy_from_seed_phrase(seed_phrase):
         print()
         raise ValueError(f"Error converting seed phrase to entropy: {e}\n\n=================== END 2 ===================\n")
     
-    # Ensure entropy is 256 bits (32 bytes)
-    if len(entropy) != 32:
+    # Ensure entropy is either 128 bits (16 bytes) or 256 bits (32 bytes)
+    if len(entropy) not in (16, 32):
         print()
-        raise ValueError("Entropy must be 256 bits (32 bytes). Please check your seed phrase.\n\n=================== END 3 ===================\n")
+        raise ValueError("Entropy must be 128 bits (16 bytes) for a 12-word seed phrase or 256 bits (32 bytes) for a 24-word seed phrase. Please check your seed phrase.\n\n=================== END 3 ===================\n")
     
     return entropy
 
 def get_user_seed_phrase():
     """
     Get and confirm the BIP39 seed phrase from the user.
+    Supports both 12-word and 24-word seed phrases.
     """
     print("\n=================== START ===================")
-    seed_phrase = input("\n Enter your BIP39 seed phrase (24 words):\n")
+    seed_phrase = input("\n Enter your BIP39 seed phrase (12 or 24 words):\n")
     confirm_seed_phrase = input("\n Please re-enter your BIP39 seed phrase to confirm:\n")
     
     if seed_phrase != confirm_seed_phrase:
@@ -60,15 +63,12 @@ def get_user_input():
     entropy = get_entropy_from_seed_phrase(seed_phrase)
 
     # Ask for a passphrase (optional)
-    passphrase = input("\nEnter a secret-passphrase for additional security (not recommanded, leave empty if not needed): ")
+    passphrase = input("\nEnter a secret-passphrase for additional security (not recommended, leave empty if not needed): ")
     passphrase_bytes = passphrase.encode('utf-8')
 
     # Hardcoded values for group configuration
     num_groups = 1
     group_threshold = 1
-
-
-
 
     group_counts = []
     for i in range(num_groups):
@@ -85,9 +85,6 @@ def get_user_input():
     # We no longer check group_threshold against num_groups since both are hardcoded to 1
 
     return entropy, group_threshold, group_counts, passphrase_bytes
-
-
-
 
 def secure_delete(variable):
     """
