@@ -1,2 +1,5 @@
 shamir-mnemonic
 mnemonic
+cryptography
+cffi
+pycparser
