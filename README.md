@@ -41,14 +41,15 @@ Upon running the script, you'll see prompts like:
 
     Enter your BIP39 seed phrase (12 or 24 words):
     Please re-enter your BIP39 seed phrase to confirm:
+    
     Enter the member THRESHOLD for group 1 (min. shares required to reconstruct):
     Enter the TOTAL number of SHARES for group 1:
-    ...
+    
     Your mnemonic shares:
      Group 1:
        Share 1: [Share mnemonic words]
        Share 2: [Share mnemonic words]
-    ...
+       ...
 
 Security Considerations
 -----------------------
